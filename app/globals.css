@@ -74,8 +74,16 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Big headings → Bemore Serif (display). */
+h1, h2 {
   font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+
+/* Subheadings → Cortese Medium. */
+h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
   color: var(--color-text-primary);
 }
 

@@ -1,0 +1,7 @@
+# Netlify build config for the Next.js app.
+# The Next.js Runtime plugin handles SSR/ISR, image optimization and routing.
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -24,7 +24,7 @@ export default function PricingCard({ tier }: { tier: PricingTier }) {
         </span>
       )}
 
-      <h3 className="font-heading text-lg font-semibold text-text-primary">
+      <h3 className="font-serif text-xl font-medium text-text-primary">
         {tier.name}
       </h3>
       <div className="mt-3 flex items-baseline gap-1">
