@@ -1,7 +1,7 @@
 <!-- ══════════════════════════ HEADER ══════════════════════════ -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16130e,100:C39A5C&height=200&section=header&text=Karthikeyan%20S&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=Video%20Editor%20%26%20Motion%20Designer&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Karthikeyan S — Video Editor & Motion Designer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16130e,100:C39A5C&height=200&section=header&text=Karthikeyan%20S&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=Video%20Editor%20%7C%20Motion%20Designer&descSize=18&descAlignY=58&animation=fadeIn" width="100%" alt="Karthikeyan S — Video Editor and Motion Designer" />
 
 <a href="https://readme-typing-svg.demolab.com">
   <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1000&color=C39A5C&center=true&vCenter=true&width=680&lines=Turning+raw+footage+into+cinematic+experiences;Motion+Graphics+%E2%80%A2+Color+Grading+%E2%80%A2+VFX;Premiere+Pro+%7C+After+Effects+%7C+Photoshop" alt="Typing SVG" />
@@ -28,10 +28,11 @@
 
 ### 🎬 Showcase
 
-<!-- Drop a screen recording of the live site (or a reel montage) at docs/demo.gif -->
-<img src="./docs/demo.gif" width="82%" alt="Portfolio walkthrough — add docs/demo.gif" />
+<!-- Replace the placeholder below with a screen recording / reel montage.
+     Save it as docs/demo.gif and change the src to ./docs/demo.gif -->
+<img src="https://placehold.co/1280x640/16130e/C39A5C/png?text=Add+your+showreel+here&font=poppins" width="82%" alt="Portfolio showreel placeholder" />
 
-<sub>▶️ Add your own demo GIF at <code>docs/demo.gif</code> — a screen-recording of the site or a montage of your edits.</sub>
+<sub>▶️ Swap this for your own GIF: save a screen-recording of the site (or a montage of your edits) as <code>docs/demo.gif</code> and point the <code>src</code> to <code>./docs/demo.gif</code>.</sub>
 
 </div>
 
