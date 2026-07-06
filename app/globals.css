@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BRAND TOKENS — mirror of tailwind.config.ts, sourced from
+   "GOAT MEDIA Brandguideline.md" (design system: "Elite Authority").
+   Single source of truth for runtime CSS. Rebrand = edit here + tailwind.config.ts.
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --color-bg: #000000;             /* base canvas — near-black, cinematic */
+  --color-bg-elevated: #121212;    /* card / panel surfaces */
+  --color-bg-container: #1f1b16;   /* nested containers */
+  --color-accent: #c39a5c;         /* primary brand gold (CTAs, metrics, highlights) */
+  --color-accent-bright: #ecbf7e;  /* brighter gold tint / surface-tint */
+  --color-accent-hover: #a0804d;   /* gold hover (darkened) */
+  --color-accent-soft: rgba(195, 154, 92, 0.2); /* halo / glow */
+  --color-on-accent: #442c00;      /* text on solid gold */
+  --color-text-primary: #ffffff;   /* headings / high-contrast */
+  --color-text-secondary: #eae1d9; /* on-surface body */
+  --color-text-muted: #9b8f81;     /* outline / muted labels */
+  --color-border: #2a2a2a;         /* card / input definition */
+  --color-border-strong: #4e4539;
+
+  /* --font-heading is injected by next/font (Poppins) on <html>. Body reuses it. */
+  --font-body: var(--font-heading), "Poppins", sans-serif;
+
+  --nav-height: 72px;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset in-page anchor jumps so content clears the sticky navbar */
+  scroll-padding-top: calc(var(--nav-height) + 24px);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+
+/* Layout helpers ---------------------------------------------------------- */
+.container-max {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-max {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.section-pad {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+/* Gold gradient text ------------------------------------------------------ */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ecbf7e 0%, #c39a5c 55%, #a0804d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Skeleton shimmer -------------------------------------------------------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-container);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(195, 154, 92, 0.08),
+    transparent
+  );
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom scrollbar (dark) ------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
