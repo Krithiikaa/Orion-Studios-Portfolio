@@ -41,7 +41,7 @@ export default function SkillBadge({
         <span aria-hidden className="absolute inset-0 rounded-full ring-1 ring-accent/25" />
         {/* Inner disc + colored logo */}
         <span className="absolute inset-[3px] flex items-center justify-center rounded-full border border-border bg-bg shadow-[0_0_28px_-6px_var(--color-accent-soft)] transition-transform duration-300 group-hover:scale-105">
-          <Image src={icon} alt={`${name} logo`} width={40} height={40} className="h-10 w-10" />
+          <Image src={icon} alt={`${name} logo`} width={48} height={48} className="h-12 w-12" />
         </span>
       </div>
       <span className="text-sm font-medium text-text-secondary">{name}</span>

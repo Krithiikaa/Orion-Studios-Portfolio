@@ -77,12 +77,11 @@ export const aboutStats = [
   { value: 7, suffix: "+", label: "Happy Clients", sub: "Worldwide" },
 ];
 
+// "Powering my creativity" — official full-color app icons.
 export const skills = [
-  { name: "Premiere Pro", level: 98, icon: "/icons/adobe-premiere-pro-icon.svg" },
-  { name: "After Effects", level: 98, icon: "/icons/adobe-after-effects-icon.svg" },
-  { name: "Photoshop", level: 98, icon: "/icons/adobe-photoshop-icon.svg" },
-  { name: "DaVinci Resolve", level: 70, icon: "/icons/davinci-resolve.svg" },
-  { name: "Blender", level: 30, icon: "/icons/blender-icon.svg" },
+  { name: "Premiere Pro", icon: "/icons/premiere-pro.svg" },
+  { name: "After Effects", icon: "/icons/after-effects.svg" },
+  { name: "Photoshop", icon: "/icons/photoshop.svg" },
 ];
 
 export const skillTags = [

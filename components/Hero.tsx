@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[92vh] items-center overflow-hidden pt-28 sm:pt-32"
+      className="relative flex min-h-[92vh] items-center overflow-hidden pt-24 pb-12 sm:pt-28"
     >
       {/* Gold halo backlight (per brand elevation spec) */}
       <div
@@ -42,20 +42,20 @@ export default function Hero() {
           Available for freelance
         </motion.span>
 
-        <motion.div variants={fadeUp} className="mt-4 w-full">
+        <motion.div variants={fadeUp} className="mt-2 w-full sm:mt-3">
           <HeroGraphic />
         </motion.div>
 
         <motion.p
           variants={fadeUp}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary md:text-xl"
+          className="mt-4 max-w-2xl text-lg leading-relaxed text-text-secondary md:text-xl"
         >
           Turning raw footage into compelling cinematic experiences.
         </motion.p>
 
         <motion.div
           variants={fadeUp}
-          className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
         >
           <Link href="/projects">
             <motion.span
@@ -82,7 +82,7 @@ export default function Hero() {
         {/* Stat row with count-up */}
         <motion.dl
           variants={fadeUp}
-          className="mt-16 grid w-full max-w-2xl grid-cols-3 gap-6 border-t border-border pt-10"
+          className="mt-10 grid w-full max-w-2xl grid-cols-3 gap-6 border-t border-border pt-8"
         >
           {heroStats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center">
