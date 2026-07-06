@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Figtree, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 
-// Poppins — brand heading + body typeface (GOAT Media guideline).
-const poppins = Poppins({
+// Font pairing (ref: Bemore Serif / Cortese Medium / Figtree Bold).
+//   • Figtree  — body + UI sans (loaded for real from Google Fonts).
+//   • Fraunces — expressive display serif standing in for the commercial
+//     "Bemore Serif" / "Cortese" until their font files are self-hosted.
+//     See app/globals.css for the drop-in swap instructions.
+const figtree = Figtree({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-figtree",
+  display: "swap",
+});
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -41,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={`${figtree.variable} ${fraunces.variable}`}>
       <body>
         <Navbar />
         <PageTransition>{children}</PageTransition>

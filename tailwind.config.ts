@@ -12,7 +12,7 @@ import type { Config } from "tailwindcss";
 //   - card / panel surface:   #121212
 //   - border / definition:    #2A2A2A
 //   - text primary:           #FFFFFF / #eae1d9   muted: #d2c4b5 / #9b8f81
-//   - font: Poppins (headings + body)
+//   - fonts: Bemore Serif / Cortese (display serif, via Fraunces stand-in) + Figtree (sans body/UI)
 // ─────────────────────────────────────────────────────────────────────────────
 
 const config: Config = {
@@ -38,8 +38,13 @@ const config: Config = {
         "border-strong": "var(--color-border-strong)",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Poppins", "sans-serif"],
-        body: ["var(--font-body)", "Poppins", "sans-serif"],
+        // Display serif (Bemore Serif → Fraunces stand-in)
+        heading: ["var(--font-heading)", "Georgia", "serif"],
+        // Serif accent (Cortese Medium → Fraunces stand-in)
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        // Body / UI sans (Figtree)
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         tightest: "-0.02em",
