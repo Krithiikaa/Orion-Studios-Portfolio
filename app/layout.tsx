@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import AmbientBackground from "@/components/AmbientBackground";
 
 // Font pairing (ref: Bemore Serif / Cortese Medium / Figtree Bold).
 //   • Figtree  — body + UI sans (loaded for real from Google Fonts).
@@ -53,6 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${figtree.variable} ${fraunces.variable}`}>
       <body>
+        <AmbientBackground />
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />
