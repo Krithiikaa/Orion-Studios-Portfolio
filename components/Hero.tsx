@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[92vh] items-center overflow-hidden pt-24 pb-12 sm:pt-28"
+      className="relative flex min-h-[92vh] items-center overflow-hidden pt-28 pb-12 sm:pt-32"
     >
       {/* Gold halo backlight (per brand elevation spec) */}
       <div

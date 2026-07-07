@@ -62,7 +62,7 @@
 html {
   scroll-behavior: smooth;
   /* Offset in-page anchor jumps so content clears the sticky navbar */
-  scroll-padding-top: calc(var(--nav-height) + 24px);
+  scroll-padding-top: calc(var(--nav-height) + 44px);
 }
 
 body {

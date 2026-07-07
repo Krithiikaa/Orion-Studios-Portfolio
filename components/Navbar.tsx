@@ -34,12 +34,26 @@ export default function Navbar() {
       className="fixed inset-x-0 top-3 z-50 px-4 sm:top-5"
     >
       <nav
-        className={`mx-auto flex max-w-6xl items-center justify-between rounded-2xl border px-4 py-3 backdrop-blur-xl transition-all duration-300 sm:px-6 ${
-          scrolled
-            ? "border-white/15 bg-white/[0.07] shadow-[0_8px_32px_-8px_rgba(0,0,0,0.6)]"
-            : "border-white/10 bg-white/[0.04] shadow-[0_8px_30px_-12px_rgba(0,0,0,0.5)]"
-        }`}
+        className="relative mx-auto flex max-w-6xl items-center justify-between rounded-[22px] px-4 py-3 transition-all duration-300 sm:px-6"
+        style={{
+          background: scrolled ? "rgba(20,20,24,0.62)" : "rgba(20,20,24,0.42)",
+          backdropFilter: "blur(24px) saturate(185%)",
+          WebkitBackdropFilter: "blur(24px) saturate(185%)",
+          border: "1px solid rgba(255,255,255,0.14)",
+          boxShadow:
+            "0 8px 32px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.30), inset 0 -1px 0 rgba(255,255,255,0.06)",
+        }}
       >
+        {/* Liquid-glass specular sheen (top light) */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-[inherit]"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.04) 20%, transparent 55%)",
+          }}
+        />
+
         {/* Logo + wordmark */}
         <Link href="/#home" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
@@ -93,7 +107,15 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
-              className="absolute inset-x-0 top-full mt-2 rounded-2xl border border-white/10 bg-white/[0.06] p-2 backdrop-blur-xl shadow-[0_12px_40px_-8px_rgba(0,0,0,0.6)] md:hidden"
+              className="absolute inset-x-0 top-full mt-2 rounded-2xl p-2 md:hidden"
+              style={{
+                background: "rgba(14,14,17,0.72)",
+                backdropFilter: "blur(24px) saturate(185%)",
+                WebkitBackdropFilter: "blur(24px) saturate(185%)",
+                border: "1px solid rgba(255,255,255,0.14)",
+                boxShadow:
+                  "0 12px 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.28)",
+              }}
             >
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (

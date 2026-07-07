@@ -41,7 +41,7 @@ export default function SkillBadge({
               "conic-gradient(from 0deg, transparent 0deg, rgba(195,154,92,0.12) 55deg, var(--color-accent) 125deg, rgba(236,191,126,0.95) 158deg, var(--color-accent) 190deg, rgba(195,154,92,0.12) 250deg, transparent 320deg)",
           }}
           animate={{ rotate: 360 }}
-          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         />
         {/* Faint static ring for definition */}
         <span aria-hidden className="absolute inset-0 rounded-full ring-1 ring-white/10" />
